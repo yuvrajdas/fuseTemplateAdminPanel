@@ -1,0 +1,14 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.left-sidenav {
+    background: #0f1729;
+    width: 279px;
+}
+
+mat-drawer-container {
+    height: 100%;
+}

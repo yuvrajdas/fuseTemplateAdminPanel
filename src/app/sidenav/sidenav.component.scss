@@ -1,0 +1,162 @@
+.sidenav_container {
+    .admin-details-section {
+        height: 266.5px;
+        width: 100%;
+
+        .admin-items-section {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 24px;
+
+        }
+
+        .admin-avatar {
+            height: calc(100% - 72px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            p {
+                color: #ffffff;
+                font-size: 14px;
+                margin-top: 20px;
+                margin-bottom: 2px;
+
+            }
+
+            span {
+                color: #94A3B8;
+            }
+
+            img {
+                border-radius: 50px;
+                width: 96px;
+            }
+        }
+    }
+
+    //admin profile notifications section end
+
+    .dashboard-links-section {
+        margin-top: 15px;
+        height: 248px;
+
+        .dashboard-header {
+            height: 56px;
+            padding: 10px 28px;
+
+            p {
+                color: #818CF8;
+                font-weight: 500;
+            }
+
+            small {
+                color: #7a7e89;
+            }
+        }
+
+        .dashboard-links {
+            ul {
+                color: #ffffff;
+                padding: 5px 10px;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 16px;
+
+                    span {
+                        margin-left: 20px;
+                    }
+                }
+
+            }
+
+            li:hover {
+                border-radius: 7px;
+                background-color: #FFFFFF1F;
+                cursor: pointer;
+            }
+        }
+    }
+
+    // dashboard link section end
+
+    .dashboard-applications {
+        margin-top: 15px;
+
+        .dashboard-application-header {
+            height: 56px;
+            padding: 10px 28px;
+
+            p {
+                color: #818CF8;
+                font-weight: 500;
+            }
+
+            small {
+                color: #7a7e89;
+            }
+        }
+
+        .dashboard-applications-links {
+            ul {
+                color: #ffffff;
+                padding: 5px 10px;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 16px;
+
+                    span {
+                        margin-left: 20px;
+                    }
+                }
+
+            }
+
+            li:hover {
+                border-radius: 7px;
+                background-color: #FFFFFF1F;
+                cursor: pointer;
+            }
+
+            mat-accordion {
+                width: 100%;
+                background: transparent !important;
+                margin: 0px !important;
+                padding: 0px !important;
+            }
+        }
+
+    }
+}
+
+::ng-deep .mat-expansion-panel {
+    background: transparent;
+    color: #ffff;
+    width: 100%;
+    box-shadow: none;
+    border: none !important;
+}
+
+::ng-deep .mat-expansion-indicator::after {
+    color: #ffff !important;
+    border: none !important;
+}
+
+::ng-deep .mat-expansion-panel-header {
+    padding: 0px !important;
+    margin-right: 12px !important;
+    border: none !important;
+
+}
+
+::ng-deep .mat-expansion-panel-header-title {
+    color: #ffff;
+    border: none !important;
+}
