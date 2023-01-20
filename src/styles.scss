@@ -4,3 +4,46 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none !important;
+}
+
+// .mat-expansion-panel-header.mat-expanded {
+//     height: 70px !important;
+// }
+.mat-expansion-panel-header.mat-expanded {
+    height: 49px !important;
+}
+
+.mat-expansion-panel {
+    background: transparent;
+    color: #ffff;
+    width: 100%;
+
+}
+
+.mat-expansion-indicator::after {
+    color: #ffff !important;
+
+}
+
+.mat-expansion-panel-header {
+    padding: 0px !important;
+    margin-right: 12px !important;
+
+
+}
+
+.mat-expansion-panel-header :hover {
+    color: #ffffff !important;
+}
+
+.mat-expansion-panel-header-title {
+    color: #ffff;
+
+}
+
+.mat-expansion-panel-body {
+    padding: 0px !important;
+}

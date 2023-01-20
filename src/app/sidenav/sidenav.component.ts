@@ -7,6 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
   constructor() {}
-
+  isAuthList = false;
+  isInvoiceList = false;
+  isshowPageLayoutLists = false;
   ngOnInit(): void {}
+  showAuthenticationLists() {
+    this.isAuthList = !this.isAuthList;
+  }
+  showInvoiceLists() {
+    this.isInvoiceList = !this.isInvoiceList;
+  }
+  showPageLayoutLists() {
+    this.isshowPageLayoutLists = !this.isshowPageLayoutLists;
+  }
 }
