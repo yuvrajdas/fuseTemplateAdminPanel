@@ -985,20 +985,51 @@
         </div>
         <div class="navigation-features-links">
             <ul>
-                <li>
-                    <mat-icon role="img"
-                        class="mat-icon notranslate fuse-vertical-navigation-item-icon ng-tns-c81-23 mat-icon-no-color ng-star-inserted"
-                        aria-hidden="true" ng-reflect-svg-icon="heroicons_outline:check-circle" data-mat-icon-type="svg"
-                        data-mat-icon-name="check-circle" data-mat-icon-namespace="heroicons_outline"><svg
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg></mat-icon>
-                    <span>Level 0</span>
+                <li class="mat-extension" (click)="showLevel1()">
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <mat-icon role="img"
+                                        class="mat-icon notranslate fuse-vertical-navigation-item-icon ng-tns-c81-23 mat-icon-no-color ng-star-inserted"
+                                        aria-hidden="true" ng-reflect-svg-icon="heroicons_outline:check-circle"
+                                        data-mat-icon-type="svg" data-mat-icon-name="check-circle"
+                                        data-mat-icon-namespace="heroicons_outline"><svg
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" fit="" height="100%" width="100%"
+                                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg></mat-icon>
+                                    <span>Level 0</span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </li>
+                <li *ngIf="isShowLeve1" class="mat-extension level-sublinks" (click)="showLevel2()">
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <span class="level-child-linkes">Level 1</span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </li>
+                <li *ngIf="isShowLeve1" class="mat-extension level-sublinks">
+                    <mat-accordion>
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <span class="level-child-linkes">Level 2</span>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                        </mat-expansion-panel>
+                    </mat-accordion>
                 </li>
             </ul>
-
         </div>
     </div>
     <!-- Navigation Feature end -->

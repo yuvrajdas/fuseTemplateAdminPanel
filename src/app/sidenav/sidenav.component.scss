@@ -441,6 +441,11 @@
                         color: #000000 !important;
                     }
 
+                    .level-child-linkes {
+                        margin-left: 45px;
+
+                    }
+
                 }
 
                 .mat-extension {
@@ -454,6 +459,14 @@
                         }
                     }
 
+                }
+
+                .level-sublinks {
+                    ul {
+                        li {
+                            margin-left: 10px;
+                        }
+                    }
                 }
 
             }
