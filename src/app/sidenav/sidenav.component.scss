@@ -447,24 +447,11 @@
                     padding: 0px 16px;
 
                     ul {
-                        list-style-type: none;
-                        cursor: default;
-
                         li {
                             padding-left: 34px;
                             width: 100%;
                             color: #ffffff !important;
-                            // cursor: pointer;
-
                         }
-
-                        li:hover {
-                            border-radius: 7px;
-                            background-color: #FFFFFF1F;
-                            cursor: pointer;
-                            color: #ffffff !important;
-                        }
-
                     }
 
                 }
