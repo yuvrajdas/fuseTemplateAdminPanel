@@ -35,6 +35,9 @@ export class DashboardComponent implements OnInit {
   newTask: number = 594;
   completedTask: number = 287;
   polarCharArray: number[] = [15, 20, 37, 28];
+  home: boolean = true;
+  budget: boolean = false;
+  team: boolean = false;
   get weekList() {
     return Week_List;
   }
@@ -254,11 +257,13 @@ export class DashboardComponent implements OnInit {
 
       colors: ['#a4b1c2', '#67768d'],
     };
-    var chart = new ApexCharts(
-      document.querySelectorAll('.charts-container')[0],
-      options
-    );
-    chart.render();
+    setTimeout(() => {
+      var chart = new ApexCharts(
+        document.querySelectorAll('.charts-container')[0],
+        options
+      );
+      chart.render();
+    }, 100);
   }
   get thisWeekValue() {
     return this.thisWeek;
@@ -267,6 +272,8 @@ export class DashboardComponent implements OnInit {
     return this.lastWeek;
   }
   drawPolarAreaChart() {
+    let chart: any;
+
     var options = {
       series: this.polarCharArray,
       colors: ['#93c5fd', '#77a0ce', '#5c7b9e', '#1e293b'],
@@ -285,21 +292,36 @@ export class DashboardComponent implements OnInit {
       },
     };
     if (this.thisWeek) {
-      var chart = new ApexCharts(
-        document.querySelectorAll('#polarChartThisWeek')[0],
-        options
-      );
       setTimeout(() => {
+        chart = new ApexCharts(
+          document.querySelectorAll('#polarChartThisWeek')[0],
+          options
+        );
         chart.render();
       }, 100);
     } else if (this.lastWeek) {
-      var chart = new ApexCharts(
-        document.querySelectorAll('#polarChartLastWeek')[0],
-        options
-      );
       setTimeout(() => {
+        chart = new ApexCharts(
+          document.querySelectorAll('#polarChartLastWeek')[0],
+          options
+        );
         chart.render();
       }, 100);
+    }
+  }
+  homeActionTab(actionTarget: string) {
+    if (actionTarget == 'home') {
+      this.home = true;
+      this.budget = false;
+      this.team = false;
+    } else if (actionTarget == 'budget') {
+      this.home = false;
+      this.budget = true;
+      this.team = false;
+    } else if (actionTarget == 'team') {
+      this.home = false;
+      this.budget = false;
+      this.team = true;
     }
   }
 }

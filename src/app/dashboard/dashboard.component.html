@@ -4,8 +4,7 @@
             <div class="header-datas">
                 <img src="/assets/images/avatars/brian-hughes.jpg" alt="">
                 <div class="nameTagSeparator">
-                    <div class="name">Welcome back, Brian!</div>
-
+                    <div class="name">Welcome back Brian</div>
                     <div class="tagline" style="margin-bottom: -10px;">
                         <svg style="width: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#64748b"
                             fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
@@ -16,7 +15,6 @@
                         <span> You have 2 new messages and 15 new tasks</span>
                     </div>
                 </div>
-
             </div>
             <div class="buttons">
                 <button class="msg" mat-button>
@@ -60,258 +58,265 @@
     </div>
     <div class="dashboard-datas">
         <div class="nav-buttons">
-            <button mat-button>Home</button><button mat-button>Budget</button><button mat-button>Team</button>
+            <button mat-button (click)="homeActionTab('home')" [class.active]="home">Home</button><button
+                (click)="homeActionTab('budget')" mat-button [class.active]="budget">Budget</button><button
+                [class.active]="team" mat-button (click)="homeActionTab('team')">Team</button>
         </div>
-        <div class="home-data">
-            <div class="cards">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="summary">Summary</div>
-                        <div class="more-menu">
-                            <button class="moremenubtn" mat-icon-button [matMenuTriggerFor]="menu"
-                                aria-label="Example icon-button with a menu">
-                                <mat-icon>more_vert</mat-icon>
-                            </button>
-                            <mat-menu #menu="matMenu">
-                                <button mat-menu-item>
-                                    <span>Yesterday</span>
+        <ng-container *ngIf="home">
+            <div class="home-data">
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="summary">Summary</div>
+                            <div class="more-menu">
+                                <button class="moremenubtn" mat-icon-button [matMenuTriggerFor]="menu"
+                                    aria-label="Example icon-button with a menu">
+                                    <mat-icon>more_vert</mat-icon>
                                 </button>
-                                <button mat-menu-item disabled>
-                                    <span>2 Days ago</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <span>3 Days ago</span>
-                                </button>
-                            </mat-menu>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>
+                                        <span>Yesterday</span>
+                                    </button>
+                                    <button mat-menu-item disabled>
+                                        <span>2 Days ago</span>
+                                    </button>
+                                    <button mat-menu-item>
+                                        <span>3 Days ago</span>
+                                    </button>
+                                </mat-menu>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="count">21</div>
+                            <div class="duetask">Due Task</div>
+                            <div class="completed">Completed: <span
+                                    style="font-size: 15px; font-weight: bold;">13</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <div class="count">21</div>
-                        <div class="duetask">Due Task</div>
-                        <div class="completed">Completed: <span style="font-size: 15px; font-weight: bold;">13</span>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="summary">Overdue</div>
+                            <div class="more-menu">
+                                <button class="moremenubtn" mat-icon-button [matMenuTriggerFor]="menu"
+                                    aria-label="Example icon-button with a menu">
+                                    <mat-icon>more_vert</mat-icon>
+                                </button>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>
+                                        <span>Yesterday</span>
+                                    </button>
+                                    <button mat-menu-item disabled>
+                                        <span>2 Days ago</span>
+                                    </button>
+                                    <button mat-menu-item>
+                                        <span>3 Days ago</span>
+                                    </button>
+                                </mat-menu>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="count" style="color: #ef4444; ">17</div>
+                            <div class="duetask" style="color:#ef4444;">Tasks</div>
+                            <div class="completed">From yesterday: <span
+                                    style="font-size: 15px; font-weight: bold;">9</span></div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="summary">Overdue</div>
-                        <div class="more-menu">
-                            <button class="moremenubtn" mat-icon-button [matMenuTriggerFor]="menu"
-                                aria-label="Example icon-button with a menu">
-                                <mat-icon>more_vert</mat-icon>
-                            </button>
-                            <mat-menu #menu="matMenu">
-                                <button mat-menu-item>
-                                    <span>Yesterday</span>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="summary">Issues</div>
+                            <div class="more-menu">
+                                <button class="moremenubtn" mat-icon-button [matMenuTriggerFor]="menu"
+                                    aria-label="Example icon-button with a menu">
+                                    <mat-icon>more_vert</mat-icon>
                                 </button>
-                                <button mat-menu-item disabled>
-                                    <span>2 Days ago</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <span>3 Days ago</span>
-                                </button>
-                            </mat-menu>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>
+                                        <span>Yesterday</span>
+                                    </button>
+                                    <button mat-menu-item disabled>
+                                        <span>2 Days ago</span>
+                                    </button>
+                                    <button mat-menu-item>
+                                        <span>3 Days ago</span>
+                                    </button>
+                                </mat-menu>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="count" style="color: #f59e0c; ">24</div>
+                            <div class="duetask" style="color:#f59e0c;">Open</div>
+                            <div class="completed">Closed today: <span
+                                    style="font-size: 15px; font-weight: bold;">19</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <div class="count" style="color: #ef4444; ">17</div>
-                        <div class="duetask" style="color:#ef4444;">Tasks</div>
-                        <div class="completed">From yesterday: <span
-                                style="font-size: 15px; font-weight: bold;">9</span></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="summary">Issues</div>
-                        <div class="more-menu">
-                            <button class="moremenubtn" mat-icon-button [matMenuTriggerFor]="menu"
-                                aria-label="Example icon-button with a menu">
-                                <mat-icon>more_vert</mat-icon>
-                            </button>
-                            <mat-menu #menu="matMenu">
-                                <button mat-menu-item>
-                                    <span>Yesterday</span>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="summary">Features</div>
+                            <div class="more-menu">
+                                <button class="moremenubtn" mat-icon-button [matMenuTriggerFor]="menu"
+                                    aria-label="Example icon-button with a menu">
+                                    <mat-icon>more_vert</mat-icon>
                                 </button>
-                                <button mat-menu-item disabled>
-                                    <span>2 Days ago</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <span>3 Days ago</span>
-                                </button>
-                            </mat-menu>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item>
+                                        <span>Yesterday</span>
+                                    </button>
+                                    <button mat-menu-item disabled>
+                                        <span>2 Days ago</span>
+                                    </button>
+                                    <button mat-menu-item>
+                                        <span>3 Days ago</span>
+                                    </button>
+                                </mat-menu>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="count" style="color: #f59e0c; ">24</div>
-                        <div class="duetask" style="color:#f59e0c;">Open</div>
-                        <div class="completed">Closed today: <span style="font-size: 15px; font-weight: bold;">19</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        <div class="summary">Features</div>
-                        <div class="more-menu">
-                            <button class="moremenubtn" mat-icon-button [matMenuTriggerFor]="menu"
-                                aria-label="Example icon-button with a menu">
-                                <mat-icon>more_vert</mat-icon>
-                            </button>
-                            <mat-menu #menu="matMenu">
-                                <button mat-menu-item>
-                                    <span>Yesterday</span>
-                                </button>
-                                <button mat-menu-item disabled>
-                                    <span>2 Days ago</span>
-                                </button>
-                                <button mat-menu-item>
-                                    <span>3 Days ago</span>
-                                </button>
-                            </mat-menu>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="count" style="color: #22c55d; ">24</div>
-                        <div class="duetask" style="color:#22c55d;">Proposals</div>
-                        <div class="completed">Closed today: <span style="font-size: 15px; font-weight: bold;">16</span>
+                        <div class="card-body">
+                            <div class="count" style="color: #22c55d; ">24</div>
+                            <div class="duetask" style="color:#22c55d;">Proposals</div>
+                            <div class="completed">Closed today: <span
+                                    style="font-size: 15px; font-weight: bold;">16</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="github-usses-summary">
-            <div class="github-usses-summary-cards">
-                <div class="github-usses-summary-cards-header">
-                    <div class="summaryname">Github Issues Summary</div>
-                    <div class="summarybtns">
-                        <button mat-button [class.active]="isActivesummary==weekList.LAST_WEEK"
-                            (click)="makeActive(weekList.LAST_WEEK)">Last Week</button>
-                        <button mat-button [class.active]="isActivesummary==weekList.THIS_WEEK"
-                            (click)="makeActive(weekList.THIS_WEEK)">This
-                            Week</button>
-                    </div>
-                </div>
-                <!-- Summary Cards Data -->
-                <div class="summary-datas">
-                    <div class="charts">
-                        <h4>New vs. Closed</h4>
-                        <div class="charts-container"></div>
-                    </div>
-                    <div class="summary-cartsdata">
-                        <h4>Overview</h4>
-                        <div class="child-cards">
-                            <div class="new-issues">
-                                <div class="issueNo">{{newIssue}}</div>
-                                <div class="issueText">New Issues</div>
-                            </div>
-                            <div class="closed">
-                                <div class="closedNo">{{closed}}</div>
-                                <div class="closedText">Closed</div>
-                            </div>
-                        </div>
-                        <div class="summary-numbers">
-                            <div class="fixed snum-common">
-                                <div class="smnum-data">{{fixed}}</div>
-                                <div class="stext-data">Fixed</div>
-                            </div>
-                            <div class="wont-fix snum-common">
-                                <div class="smnum-data">{{wontfixed}}</div>
-                                <div class="stext-data">Won't Fix</div>
-                            </div>
-                            <div class="re-opened snum-common">
-                                <div class="smnum-data">{{reopened}}</div>
-                                <div class="stext-data">Re-opened</div>
-                            </div>
-                            <div class="needs-triage snum-common">
-                                <div class="smnum-data">{{needtriage}}</div>
-                                <div class="stext-data">Needs Triage</div>
-                            </div>
+            <div class="github-usses-summary">
+                <div class="github-usses-summary-cards">
+                    <div class="github-usses-summary-cards-header">
+                        <div class="summaryname">Github Issues Summary</div>
+                        <div class="summarybtns">
+                            <button mat-button [class.active]="isActivesummary==weekList.LAST_WEEK"
+                                (click)="makeActive(weekList.LAST_WEEK)">Last Week</button>
+                            <button mat-button [class.active]="isActivesummary==weekList.THIS_WEEK"
+                                (click)="makeActive(weekList.THIS_WEEK)">This
+                                Week</button>
                         </div>
                     </div>
-                </div>
-                <!-- Summary Cards Data End-->
-            </div>
-        </div>
-        <div class="card3-section">
-            <div class="task-distribution">
-
-                <div class="task-distribution-header">
-                    <div class="task-distribution-header-text">Task Distribution</div>
-                    <div class="task-distribution-header-buttons">
-                        <button mat-button [class.active]="isActiveTaskDistrubtion==weekList.LAST_WEEK"
-                            (click)="setTaskDistributionWeekList(weekList.LAST_WEEK)">Last Week</button>
-                        <button mat-button [class.active]="isActiveTaskDistrubtion==weekList.THIS_WEEK"
-                            (click)="setTaskDistributionWeekList(weekList.THIS_WEEK)">This Week</button>
-                    </div>
-                </div>
-                <div id="polarChartThisWeek" class="polarChart" *ngIf="thisWeek">
-                </div>
-                <div id="polarChartLastWeek" class="polarChart" *ngIf="lastWeek">
-                </div>
-                <div class="chartDatas">
-                    <div class="new-task">
-                        <div class="completed-task-num">{{newTask}}</div>
-                        <div class="completed-task-text">New Task</div>
-                    </div>
-                    <div class="completed-task">
-                        <div class="completed-task-num">{{completedTask}}</div>
-                        <div class="completed-task-text">Completed Task</div>
-                    </div>
-                </div>
-            </div>
-            <div class="schedule">
-                <div class="schedule-header">
-                    <div class="schedule-header-text">Schedule</div>
-                    <div class="schedule-header-buttons">
-                        <button mat-button (click)="setScheduledDatas(ScheduledData.TODAY)"
-                            [class.active]="isActiveSchedule == ScheduledData.TODAY">Today</button>
-                        <button mat-button (click)="setScheduledDatas(ScheduledData.TOMORROW)"
-                            [class.active]="isActiveSchedule == ScheduledData.TOMORROW">Tomorrow</button>
-                    </div>
-                </div>
-                <div class="schedule-body">
-                    <ul>
-                        <li *ngFor="let scheduleData of scheduledDataArrayObjs">
-                            <div class="libody">
-                                <div class="liheading">{{scheduleData.scheduleName}}</div>
-                                <div class="lidesc">
-                                    <svg style="width: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                        fill="#94a3b8" fit="" height="100%" width="100%"
-                                        preserveAspectRatio="xMidYMid meet" focusable="false">
-                                        <path fill-rule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                                            clip-rule="evenodd">
-                                        </path>
-                                    </svg>
-                                    <span>&nbsp; {{scheduleData.scheduleTime}}</span>&nbsp;&nbsp;&nbsp;
-                                    <svg *ngIf="scheduleData.scheduleLocation" style="width: 20px;"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#94a3b8" fit=""
-                                        height="100%" width="100%" preserveAspectRatio="xMidYMid meet"
-                                        focusable="false">
-                                        <path fill-rule="evenodd"
-                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                                            clip-rule="evenodd">
-                                        </path>
-                                    </svg>
-                                    <span *ngIf="scheduleData.scheduleLocation">&nbsp;
-                                        {{scheduleData.scheduleLocation}}</span>
+                    <!-- Summary Cards Data -->
+                    <div class="summary-datas">
+                        <div class="charts">
+                            <h4>New vs. Closed</h4>
+                            <div class="charts-container"></div>
+                        </div>
+                        <div class="summary-cartsdata">
+                            <h4>Overview</h4>
+                            <div class="child-cards">
+                                <div class="new-issues">
+                                    <div class="issueNo">{{newIssue}}</div>
+                                    <div class="issueText">New Issues</div>
+                                </div>
+                                <div class="closed">
+                                    <div class="closedNo">{{closed}}</div>
+                                    <div class="closedText">Closed</div>
                                 </div>
                             </div>
-                            <div class="li-arrow">
-                                <button mat-button
-                                    style="border-radius: 100px; width: 40px; display: flex; align-items: center; justify-content: center;">
-                                    <svg style="width: 25px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-                                        fill="#94a3b8" fit="" height="100%" width="100%"
-                                        preserveAspectRatio="xMidYMid meet" focusable="false">
-                                        <path fill-rule="evenodd"
-                                            d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                                            clip-rule="evenodd"></path>
-                                    </svg>
-                                </button>
+                            <div class="summary-numbers">
+                                <div class="fixed snum-common">
+                                    <div class="smnum-data">{{fixed}}</div>
+                                    <div class="stext-data">Fixed</div>
+                                </div>
+                                <div class="wont-fix snum-common">
+                                    <div class="smnum-data">{{wontfixed}}</div>
+                                    <div class="stext-data">Won't Fix</div>
+                                </div>
+                                <div class="re-opened snum-common">
+                                    <div class="smnum-data">{{reopened}}</div>
+                                    <div class="stext-data">Re-opened</div>
+                                </div>
+                                <div class="needs-triage snum-common">
+                                    <div class="smnum-data">{{needtriage}}</div>
+                                    <div class="stext-data">Needs Triage</div>
+                                </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <!-- Summary Cards Data End-->
                 </div>
             </div>
-        </div>
+            <div class="card3-section">
+                <div class="task-distribution">
+
+                    <div class="task-distribution-header">
+                        <div class="task-distribution-header-text">Task Distribution</div>
+                        <div class="task-distribution-header-buttons">
+                            <button mat-button [class.active]="isActiveTaskDistrubtion==weekList.LAST_WEEK"
+                                (click)="setTaskDistributionWeekList(weekList.LAST_WEEK)">Last Week</button>
+                            <button mat-button [class.active]="isActiveTaskDistrubtion==weekList.THIS_WEEK"
+                                (click)="setTaskDistributionWeekList(weekList.THIS_WEEK)">This Week</button>
+                        </div>
+                    </div>
+                    <div id="polarChartThisWeek" class="polarChart" *ngIf="thisWeek">
+                    </div>
+                    <div id="polarChartLastWeek" class="polarChart" *ngIf="lastWeek">
+                    </div>
+                    <div class="chartDatas">
+                        <div class="new-task">
+                            <div class="completed-task-num">{{newTask}}</div>
+                            <div class="completed-task-text">New Task</div>
+                        </div>
+                        <div class="completed-task">
+                            <div class="completed-task-num">{{completedTask}}</div>
+                            <div class="completed-task-text">Completed Task</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="schedule">
+                    <div class="schedule-header">
+                        <div class="schedule-header-text">Schedule</div>
+                        <div class="schedule-header-buttons">
+                            <button mat-button (click)="setScheduledDatas(ScheduledData.TODAY)"
+                                [class.active]="isActiveSchedule == ScheduledData.TODAY">Today</button>
+                            <button mat-button (click)="setScheduledDatas(ScheduledData.TOMORROW)"
+                                [class.active]="isActiveSchedule == ScheduledData.TOMORROW">Tomorrow</button>
+                        </div>
+                    </div>
+                    <div class="schedule-body">
+                        <ul>
+                            <li *ngFor="let scheduleData of scheduledDataArrayObjs">
+                                <div class="libody">
+                                    <div class="liheading">{{scheduleData.scheduleName}}</div>
+                                    <div class="lidesc">
+                                        <svg style="width: 20px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                            fill="#94a3b8" fit="" height="100%" width="100%"
+                                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                                                clip-rule="evenodd">
+                                            </path>
+                                        </svg>
+                                        <span>&nbsp; {{scheduleData.scheduleTime}}</span>&nbsp;&nbsp;&nbsp;
+                                        <svg *ngIf="scheduleData.scheduleLocation" style="width: 20px;"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#94a3b8" fit=""
+                                            height="100%" width="100%" preserveAspectRatio="xMidYMid meet"
+                                            focusable="false">
+                                            <path fill-rule="evenodd"
+                                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                                clip-rule="evenodd">
+                                            </path>
+                                        </svg>
+                                        <span *ngIf="scheduleData.scheduleLocation">&nbsp;
+                                            {{scheduleData.scheduleLocation}}</span>
+                                    </div>
+                                </div>
+                                <div class="li-arrow">
+                                    <button mat-button
+                                        style="border-radius: 100px; width: 40px; display: flex; align-items: center; justify-content: center;">
+                                        <svg style="width: 25px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                            fill="#94a3b8" fit="" height="100%" width="100%"
+                                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                                            <path fill-rule="evenodd"
+                                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
     </div>
 </div>
