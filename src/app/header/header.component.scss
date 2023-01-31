@@ -1,3 +1,41 @@
-.example-spacer {
-    flex: 1 1 auto;
-}
+ mat-toolbar {
+     display: flex;
+     padding: 0px !important;
+     margin: 0px !important;
+     border-bottom: 1px solid #e2e8f0;
+
+
+     .header_icons {
+         flex-grow: 1;
+         display: flex;
+         justify-content: end;
+
+         .toggler_btn {
+             position: absolute;
+             left: 5px;
+         }
+
+         button {
+             margin-right: 5px !important;
+         }
+
+     }
+
+     .header_icons button:last-child {
+         margin-right: 10px !important;
+
+     }
+
+     .chatButton {
+         border-left: 1px solid #e5e5e5;
+         width: 64px !important;
+         height: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         cursor: pointer;
+     }
+
+
+
+ }

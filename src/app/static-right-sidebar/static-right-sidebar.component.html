@@ -1,0 +1,6 @@
+<div class="contact-container">
+    <ul>
+        <li *ngFor="let contact of contacts" (click)="toggleSidebarRightSidebarForMe.emit()"><img
+                src={{contact.profile}} alt=""></li>
+    </ul>
+</div>

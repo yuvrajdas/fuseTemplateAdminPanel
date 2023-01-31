@@ -2,8 +2,13 @@
   <mat-drawer class="left-sidenav" mode="side" [opened]="sideBarOpen">
     <app-sidenav></app-sidenav>
   </mat-drawer>
+  <mat-drawer position="end" [opened]="rightSideBar">
+    <app-right-sidenav (toggleSidebarRightSidebarForMe)="rightSidebarToggler()"></app-right-sidenav>
+  </mat-drawer>
   <mat-drawer-content>
-    <app-header (toggleSidebarForMe)="sideBarToggler()"> </app-header>
+    <app-header (toggleSidebarForMe)="sideBarToggler()" (toggleSidebarRightSidebarForMe)="rightSidebarToggler()">
+    </app-header>
+    <app-static-right-sidebar (toggleSidebarRightSidebarForMe)="rightSidebarToggler()"></app-static-right-sidebar>
     <main>
       <router-outlet></router-outlet>
     </main>

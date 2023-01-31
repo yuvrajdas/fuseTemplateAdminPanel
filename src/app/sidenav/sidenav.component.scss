@@ -418,27 +418,34 @@
         }
 
         .navigation-features-links {
+            width: 100%;
+
             ul {
                 color: #ffffff;
                 padding: 5px 10px;
+                width: 100%;
 
                 li {
                     display: flex;
                     align-items: center;
                     padding: 10px 16px;
+                    width: 100%;
+                    position: relative;
 
                     span {
                         margin-left: 20px;
+                        flex: 1;
                     }
 
-                    .changelog-notification {
+                    .navigation-features-notification {
                         position: relative;
-                        left: 60px;
                         border-radius: 10px;
-                        background-color: #fde047;
-                        width: 45px;
+                        background-color: #2dd4bf;
+                        width: fit-content;
+                        padding: 0 7px;
                         text-align: center;
                         color: #000000 !important;
+                        margin-right: -10px;
                     }
 
                     .level-child-linkes {
@@ -470,6 +477,20 @@
                 }
 
             }
+
+
+        }
+
+        .active {
+            border-radius: 7px;
+            background-color: #FFFFFF1F;
+            cursor: pointer;
+            color: #ffffff !important;
+        }
+
+        .disabled:hover {
+            background-color: #0f1729;
+            cursor: alias;
         }
 
         li:hover {
@@ -486,6 +507,20 @@
             padding: 0px !important;
         }
 
+    }
+
+    //navigation-feature-section end
+
+    .footer-logo-section {
+        padding: 20px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.12 !important;
+
+        img {
+            width: 145px !important;
+        }
     }
 }
 

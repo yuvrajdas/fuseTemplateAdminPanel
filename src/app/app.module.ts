@@ -12,6 +12,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { StaticRightSidebarComponent } from './static-right-sidebar/static-right-sidebar.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatChipsModule } from '@angular/material/chips';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +22,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     DashboardComponent,
     HeaderComponent,
     RightSidenavComponent,
+    StaticRightSidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatIconModule,
     MatButtonModule,
     MatExpansionModule,
+    MatMenuModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

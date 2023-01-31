@@ -1,0 +1,52 @@
+<div class="chat-container">
+    <div class="chat-header">
+        <div class="chat-avatar">
+            <img src={{selectedContact.profile}} alt="">
+            <div class="name">{{selectedContact.name}}</div>
+        </div>
+        <div>
+            <button mat-button (click)="chatSidebar()">
+                <mat-icon><svg xmlns="http://www.w3.org/2000/svg" fill="transparent" viewBox="0 0 24 24"
+                        stroke="currentColor" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet"
+                        focusable="false">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg></mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="chats">
+        <div class="contacts">
+            <ul>
+                <li *ngFor="let contact of contacts" (click)="onContactSelected(contact)"><img src={{contact.profile}}
+                        alt=""></li>
+            </ul>
+        </div>
+        <div class="messages">
+            <div class="date-info">
+                <div>
+                    <hr>
+                </div>
+                <span> January 23, 2023 </span>
+                <div>
+                    <hr>
+                </div>
+            </div>
+            <div class="conversations" [class.right]="message.me" [class.left]="message.me==false"
+                *ngFor="let message of messages">
+                <div class="chat-data">{{message.messgeData}} <small>
+                        {{message.time}}</small></div>
+            </div>
+            <div class="text-area">
+                <input type="text" #msg (keyup.enter)="sendMessage($event)" value={{inputValue}}>
+                <mat-icon (click)="sendMessage(msg)" role="img" class="rotateImg"><svg
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#64748b" fit=""
+                        height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                    </svg>
+                </mat-icon>
+            </div>
+        </div>
+    </div>
+</div>

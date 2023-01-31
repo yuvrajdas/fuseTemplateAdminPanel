@@ -9,7 +9,11 @@ export class AppComponent {
   title = 'fuse-template1';
   showFiller = false;
   sideBarOpen = true;
+  rightSideBar = false;
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
+  }
+  rightSidebarToggler() {
+    this.rightSideBar = !this.rightSideBar;
   }
 }
