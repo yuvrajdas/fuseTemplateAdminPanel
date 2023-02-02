@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-static-right-sidebar',
   templateUrl: './static-right-sidebar.component.html',
@@ -8,7 +8,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class StaticRightSidebarComponent implements OnInit {
   @Output() toggleSidebarRightSidebarForMe: EventEmitter<any> =
     new EventEmitter();
-  constructor() {}
+  currURL = '';
+  constructor(private router: Router) {
+    // private member of Router
+    const currentPageUrl = router.url; // router.url contain the active route info
+    this.currURL = currentPageUrl;
+  }
   contacts = [
     { name: 'Silva Foster', profile: 'assets/images/avatars/female-01.jpg' },
     { name: 'Nunez Faulkner', profile: 'assets/images/avatars/male-01.jpg' },

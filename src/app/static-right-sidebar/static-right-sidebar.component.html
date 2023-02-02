@@ -1,4 +1,4 @@
-<div class="contact-container">
+<div class="contact-container" [ngStyle]="{'min-width': (currURL=='/dashboard/analytics') ? '64px' : ''}">
     <ul>
         <li *ngFor="let contact of contacts" (click)="toggleSidebarRightSidebarForMe.emit()"><img
                 src={{contact.profile}} alt=""></li>

@@ -1,0 +1,302 @@
+<div class="analytics-container">
+    <div class="analytics-header">
+        <div class="header-texts">
+            <div class="header-heading">Analytics dashboard</div>
+            <div class="sub-heading">Monitor metrics, check reports and review performance</div>
+        </div>
+        <div class="header-buttons">
+            <button mat-button class="setting"> <mat-icon role="img"
+                    class="mat-icon notranslate icon-size-5 mat-icon-no-color" aria-hidden="true"
+                    data-mat-icon-type="svg" data-mat-icon-name="cog" data-mat-icon-namespace="heroicons_solid"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#64748B" fit="" height="100%"
+                        width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                        <path fill-rule="evenodd"
+                            d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                            clip-rule="evenodd"></path>
+                    </svg></mat-icon> Settings</button>
+            <button mat-button class="export">
+                <mat-icon role="img" class="mat-icon notranslate icon-size-5 mat-icon-no-color" aria-hidden="true"
+                    data-mat-icon-type="svg" data-mat-icon-name="save" data-mat-icon-namespace="heroicons_solid"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" fit="" height="100%"
+                        width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                        <path
+                            d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z">
+                        </path>
+                    </svg>
+                </mat-icon> <span> &nbsp;Export</span>
+            </button>
+        </div>
+    </div>
+    <div class="visitors-overview-chart">
+        <div class="chart-header">
+            <div class="chart-text">
+                <div class="chart-heading">Visitors Overview</div>
+                <div class="chart-subheading">Number of unique visitors</div>
+            </div>
+            <div class="chart-buttons">
+                <button mat-button class="last-year">Last Year</button>
+                <button class="this-year" mat-button>This Year</button>
+            </div>
+        </div>
+        <div class="analytics-chart"></div>
+    </div>
+    <!-- Coversation Impression Visit cards -->
+    <div class="card-section-2">
+        <div class="card-container">
+            <div class="conversions common">
+                <div class="conversions-header">
+                    <div class="conversions-heading">Conversions</div>
+                    <button mat-button [matMenuTriggerFor]="afterMenu"
+                        style="font-size: 12px; padding:0px; width: 70px; margin: 0px !important; color: #64748b;">30
+                        Days</button>
+                    <mat-menu #afterMenu="matMenu" xPosition="after">
+                        <button mat-menu-item>30 Days</button>
+                        <button mat-menu-item>3 Months</button>
+                        <button mat-menu-item>9 Months</button>
+                    </mat-menu>
+                </div>
+                <div class="conversions-counter">
+                    <div class="con-num">4,123 </div>&nbsp;&nbsp;&nbsp;
+                    <div class="indication-graph">
+                        <mat-icon role="img" class="mat-icon notranslate icon-size-5 text-red-500 mat-icon-no-color"
+                            aria-hidden="true" ng-reflect-svg-icon="heroicons_solid:trending-down"
+                            data-mat-icon-type="svg" data-mat-icon-name="trending-down"
+                            data-mat-icon-namespace="heroicons_solid"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="red" fit="" height="100%" width="100%"
+                                preserveAspectRatio="xMidYMid meet" focusable="false">
+                                <path fill-rule="evenodd"
+                                    d="M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z"
+                                    clip-rule="evenodd"></path>
+                            </svg></mat-icon>
+                        <div><span style="color:  red; font-weight: 400; font-size: 13px;">2%</span><span
+                                style="color: #64748b; font-size: 13px;"> below
+                                target</span></div>
+                    </div>
+
+                </div>
+                <div class="conversions-chart-container">
+                    <div class="conversions-chart"></div>
+                </div>
+            </div>
+            <div class="impressions common">
+                <div class="impressions-header">
+                    <div class="impressions-heading">Impressions</div>
+                    <button mat-button [matMenuTriggerFor]="afterMenu"
+                        style="font-size: 12px; padding:0px; width: 70px; margin: 0px !important; color: #64748b;">30
+                        Days</button>
+                    <mat-menu #afterMenu="matMenu" xPosition="after">
+                        <button mat-menu-item>30 Days</button>
+                        <button mat-menu-item>3 Months</button>
+                        <button mat-menu-item>9 Months</button>
+                    </mat-menu>
+                </div>
+                <div class="impressions-counter">
+                    <div class="con-num">46,085
+                    </div>&nbsp;&nbsp;&nbsp;
+                    <div class="indication-graph">
+                        <mat-icon role="img" class="mat-icon notranslate icon-size-5 text-red-500 mat-icon-no-color"
+                            aria-hidden="true" ng-reflect-svg-icon="heroicons_solid:trending-down"
+                            data-mat-icon-type="svg" data-mat-icon-name="trending-down"
+                            data-mat-icon-namespace="heroicons_solid"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="red" fit="" height="100%" width="100%"
+                                preserveAspectRatio="xMidYMid meet" focusable="false">
+                                <path fill-rule="evenodd"
+                                    d="M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z"
+                                    clip-rule="evenodd"></path>
+                            </svg></mat-icon>
+                        <div><span style="color:  red; font-weight: 400; font-size: 13px;">4%</span><span
+                                style="color: #64748b; font-size: 13px;"> below
+                                target</span></div>
+                    </div>
+
+                </div>
+                <div class="impressions-chart-container">
+                    <div class="impressions-chart"></div>
+                </div>
+            </div>
+            <div class="visits common">
+                <div class="visits-header">
+                    <div class="visits-heading">Visits</div>
+                    <button mat-button [matMenuTriggerFor]="afterMenu"
+                        style="font-size: 12px; padding:0px; width: 70px; margin: 0px !important; color: #64748b;">30
+                        Days</button>
+                    <mat-menu #afterMenu="matMenu" xPosition="after">
+                        <button mat-menu-item>30 Days</button>
+                        <button mat-menu-item>3 Months</button>
+                        <button mat-menu-item>9 Months</button>
+                    </mat-menu>
+                </div>
+                <div class="visits-counter">
+                    <div class="con-num">62,083</div>&nbsp;&nbsp;&nbsp;
+                    <div class="indication-graph">
+                        <mat-icon role="img" class="mat-icon notranslate icon-size-5 text-red-500 mat-icon-no-color"
+                            aria-hidden="true" ng-reflect-svg-icon="heroicons_solid:trending-down"
+                            data-mat-icon-type="svg" data-mat-icon-name="trending-down"
+                            data-mat-icon-namespace="heroicons_solid"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="red" fit="" height="100%" width="100%"
+                                preserveAspectRatio="xMidYMid meet" focusable="false">
+                                <path fill-rule="evenodd"
+                                    d="M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z"
+                                    clip-rule="evenodd"></path>
+                            </svg></mat-icon>
+                        <div><span style="color:  red; font-weight: 400; font-size: 13px;">4%</span><span
+                                style="color: #64748b; font-size: 13px;"> below
+                                target</span></div>
+                    </div>
+
+                </div>
+                <div class="visits-chart-container">
+                    <div class="visits-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Visitors vs Page view cards -->
+    <div class="card-section-3">
+        <div class="card-s3-container">
+            <div class="visitors-page-header">
+                <div class="visitors-heading">Visitors vs. Page Views</div>
+                <button mat-button [matMenuTriggerFor]="afterMenu"
+                    style="font-size: 12px; padding:0px; width: 70px; margin: 0px !important; color: #64748b;">30
+                    Days</button>
+                <mat-menu #afterMenu="matMenu" xPosition="after">
+                    <button mat-menu-item>30 Days</button>
+                    <button mat-menu-item>3 Months</button>
+                    <button mat-menu-item>9 Months</button>
+                </mat-menu>
+            </div>
+            <div class="visitors-page-counter">
+                <div class="visitors-page-counter-wrapper">
+                    <div class="text">
+                        <span>Overall Score &nbsp;</span>
+                        <mat-icon role="img" style="width:14px;"
+                            class="mat-icon notranslate mat-tooltip-trigger ml-1.5 icon-size-4 text-hint mat-icon-no-color"
+                            aria-hidden="true" ng-reflect-svg-icon="heroicons_solid:information-ci"
+                            ng-reflect-message="Score is calculated by using t" data-mat-icon-type="svg"
+                            data-mat-icon-name="information-circle" data-mat-icon-namespace="heroicons_solid"
+                            aria-describedby="cdk-describedby-message-2" cdk-describedby-host=""><svg
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" fit=""
+                                height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </mat-icon>
+                    </div>
+                    <div class="number">
+                        <span>472 </span>
+                        <mat-icon role="img" class="mat-icon notranslate icon-size-5 text-green-500 mat-icon-no-color"
+                            aria-hidden="true" ng-reflect-svg-icon="heroicons_solid:arrow-circle-u"
+                            data-mat-icon-type="svg" data-mat-icon-name="arrow-circle-up"
+                            data-mat-icon-namespace="heroicons_solid"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="#22c55e" fit="" height="100%" width="100%"
+                                preserveAspectRatio="xMidYMid meet" focusable="false">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </mat-icon>
+                        <small style=" color: #22c55e;"> 42.9%</small>
+                    </div>
+                </div>
+                <div class="visitors-page-counter-wrapper">
+                    <div class="text">
+                        <span>Average Ratio </span>
+                        <mat-icon role="img" style="width:14px;"
+                            class="mat-icon notranslate mat-tooltip-trigger ml-1.5 icon-size-4 text-hint mat-icon-no-color"
+                            aria-hidden="true" ng-reflect-svg-icon="heroicons_solid:information-ci"
+                            ng-reflect-message="Score is calculated by using t" data-mat-icon-type="svg"
+                            data-mat-icon-name="information-circle" data-mat-icon-namespace="heroicons_solid"
+                            aria-describedby="cdk-describedby-message-2" cdk-describedby-host=""><svg
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" fit=""
+                                height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </mat-icon>
+                    </div>
+                    <div class="number">
+                        <span>45% </span>
+                        <mat-icon style="width:24px;" role="img"
+                            class="mat-icon notranslate icon-size-5 text-red-500 mat-icon-no-color" aria-hidden="true"
+                            ng-reflect-svg-icon="heroicons_solid:arrow-circle-d" data-mat-icon-type="svg"
+                            data-mat-icon-name="arrow-circle-down" data-mat-icon-namespace="heroicons_solid"><svg
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="red" fit="" height="100%"
+                                width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z"
+                                    clip-rule="evenodd"></path>
+                            </svg></mat-icon>
+                        <small style=" color: red;"> 13.1%</small>
+                    </div>
+                </div>
+                <div class="visitors-page-counter-wrapper">
+                    <div class="text">
+                        <span>Predicted Ratio </span>
+                        <mat-icon role="img" style="width:14px;"
+                            class="mat-icon notranslate mat-tooltip-trigger ml-1.5 icon-size-4 text-hint mat-icon-no-color"
+                            aria-hidden="true" ng-reflect-svg-icon="heroicons_solid:information-ci"
+                            ng-reflect-message="Score is calculated by using t" data-mat-icon-type="svg"
+                            data-mat-icon-name="information-circle" data-mat-icon-namespace="heroicons_solid"
+                            aria-describedby="cdk-describedby-message-2" cdk-describedby-host=""><svg
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" fit=""
+                                height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                                <path fill-rule="evenodd"
+                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </mat-icon>
+                    </div>
+                    <div class="number">
+                        <span>55% </span>
+                        <mat-icon role="img" class="mat-icon notranslate icon-size-5 text-green-500 mat-icon-no-color"
+                            aria-hidden="true" ng-reflect-svg-icon="heroicons_solid:arrow-circle-u"
+                            data-mat-icon-type="svg" data-mat-icon-name="arrow-circle-up"
+                            data-mat-icon-namespace="heroicons_solid"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 20 20" fill="#22c55e" fit="" height="100%" width="100%"
+                                preserveAspectRatio="xMidYMid meet" focusable="false">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </mat-icon>
+                        <small style=" color: #22c55e;"> 22.2%</small>
+                    </div>
+                </div>
+            </div>
+            <div class="visitors-page-chart">
+                <div id="visitors-vs-page-view-chart"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Your Audience heading section -->
+    <div class="audience-heading">
+        <div class="audience-main-heading">Your Audience</div>
+        <div class="audience-sub-heading">Demographic properties of your users</div>
+    </div>
+
+    <!-- Card section 4 -->
+    <div class="card-section-4">
+        <div class="card-section-4-wrapper">
+            <div class="common">
+                <div class="cs4-heading">
+                    <div class="csh4-text">New vs. Returning</div>
+                    <button mat-button [matMenuTriggerFor]="afterMenu"
+                        style="font-size: 12px; padding:0px; width: 70px; margin: 0px !important; color: #64748b;">30
+                        Days</button>
+                    <mat-menu #afterMenu="matMenu" xPosition="after">
+                        <button mat-menu-item>30 Days</button>
+                        <button mat-menu-item>3 Months</button>
+                        <button mat-menu-item>9 Months</button>
+                    </mat-menu>
+                </div>
+                <div class="cs4-chart"></div>
+                <div class="cs4-list"></div>
+            </div>
+            <div class="common"></div>
+            <div class="common"></div>
+            <div class="common"></div>
+        </div>
+    </div>
+</div>

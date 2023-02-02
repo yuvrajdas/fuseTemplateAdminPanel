@@ -15,6 +15,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { StaticRightSidebarComponent } from './static-right-sidebar/static-right-sidebar.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatChipsModule } from '@angular/material/chips';
+import { AnalyticsComponent } from './analytics/analytics.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { MatChipsModule } from '@angular/material/chips';
     HeaderComponent,
     RightSidenavComponent,
     StaticRightSidebarComponent,
+    AnalyticsComponent,
   ],
   imports: [
     BrowserModule,

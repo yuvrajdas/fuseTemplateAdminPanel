@@ -209,9 +209,9 @@ export class DashboardComponent implements OnInit {
     this.drawPolarAreaChart();
   }
   ngOnInit(): void {
-    this.drawChart();
-    console.log('this week', this.thisWeek);
-    console.log('last week', this.lastWeek);
+    setTimeout(() => {
+      this.drawChart();
+    }, 500);
     this.setScheduledDatas(ScheduledData.TODAY);
   }
   ngAfterViewInit(): void {
@@ -239,7 +239,10 @@ export class DashboardComponent implements OnInit {
       stroke: {
         width: [0, 5],
       },
-
+      tooltip: {
+        followCursor: true,
+        theme: 'dark',
+      },
       dataLabels: {
         enabled: true,
         enabledOnSeries: [1],
@@ -284,6 +287,10 @@ export class DashboardComponent implements OnInit {
       stroke: {
         colors: ['#fff'],
       },
+      tooltip: {
+        followCursor: true,
+        theme: 'dark',
+      },
       fill: {
         opacity: 0.8,
       },
@@ -298,7 +305,7 @@ export class DashboardComponent implements OnInit {
           options
         );
         chart.render();
-      }, 100);
+      }, 500);
     } else if (this.lastWeek) {
       setTimeout(() => {
         chart = new ApexCharts(
@@ -306,7 +313,7 @@ export class DashboardComponent implements OnInit {
           options
         );
         chart.render();
-      }, 100);
+      }, 500);
     }
   }
   homeActionTab(actionTarget: string) {
@@ -314,6 +321,7 @@ export class DashboardComponent implements OnInit {
       this.home = true;
       this.budget = false;
       this.team = false;
+      this.drawPolarAreaChart();
     } else if (actionTarget == 'budget') {
       this.home = false;
       this.budget = true;
