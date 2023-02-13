@@ -20,6 +20,10 @@ export class AnalyticsComponent implements OnInit {
     this.impressionsChart();
     this.visitsChart();
     this.visitorsVSpageViewChart();
+    this.newVSreturningChart();
+    this.genderChart();
+    this.ageChart();
+    this.languageChart();
   }
 
   analyticsChart() {
@@ -507,6 +511,131 @@ export class AnalyticsComponent implements OnInit {
 
     var chart = new ApexCharts(
       document.querySelector('#visitors-vs-page-view-chart'),
+      options
+    );
+    chart.render();
+  }
+
+  newVSreturningChart() {
+    var options = {
+      series: [80, 20],
+      chart: {
+        type: 'donut',
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      legend: {
+        show: false,
+      },
+      colors: ['#3182CE', '#63B3EC'],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+          },
+        },
+      ],
+    };
+
+    var chart = new ApexCharts(document.querySelector('.cs4-chart'), options);
+    chart.render();
+  }
+  // cs4-gender-chart
+
+  genderChart() {
+    var options = {
+      series: [55, 45],
+      chart: {
+        type: 'donut',
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      legend: {
+        show: false,
+      },
+      colors: ['#319795', '#4FD1C5'],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+          },
+        },
+      ],
+    };
+
+    var chart = new ApexCharts(
+      document.querySelector('.cs4-gender-chart'),
+      options
+    );
+    chart.render();
+  }
+  ageChart() {
+    var options = {
+      series: [35, 65],
+      chart: {
+        type: 'donut',
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      legend: {
+        show: false,
+      },
+      colors: ['#DD6B1F', '#F6AD55'],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+          },
+        },
+      ],
+    };
+
+    var chart = new ApexCharts(
+      document.querySelector('.cs4-age-chart'),
+      options
+    );
+    chart.render();
+  }
+  // language-chart
+  languageChart() {
+    var options = {
+      series: [25, 75],
+      chart: {
+        type: 'donut',
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      legend: {
+        show: false,
+      },
+      colors: ['#805AD5', '#B794F4'],
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 200,
+            },
+          },
+        },
+      ],
+    };
+
+    var chart = new ApexCharts(
+      document.querySelector('.cs4-language-chart'),
       options
     );
     chart.render();

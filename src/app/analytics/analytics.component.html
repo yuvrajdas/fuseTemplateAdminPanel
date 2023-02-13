@@ -291,12 +291,113 @@
                         <button mat-menu-item>9 Months</button>
                     </mat-menu>
                 </div>
-                <div class="cs4-chart"></div>
-                <div class="cs4-list"></div>
+                <div class="cs4-chart">
+                </div>
+                <div class="cs4-list">
+                    <table align="center">
+                        <tr style="border-bottom:1px solid red;">
+                            <td>New</td>
+                            <td style="color: #1e293b; font-weight: 500; font-size: 14px;">36,868</td>
+                            <td style="color: #64748b; font-weight: 400; font-size: 14px;">80%</td>
+                        </tr>
+                        <tr>
+                            <td>Returning</td>
+                            <td style="color: #1e293b; font-weight: 500; font-size: 14px;">9,217</td>
+                            <td style="color: #64748b; font-weight: 400; font-size: 14px;">20%</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
-            <div class="common"></div>
-            <div class="common"></div>
-            <div class="common"></div>
+            <div class="common">
+                <div class="cs4-heading">
+                    <div class="csh4-text">Gender</div>
+                    <button mat-button [matMenuTriggerFor]="afterMenu"
+                        style="font-size: 12px; padding:0px; width: 70px; margin: 0px !important; color: #64748b;">30
+                        Days</button>
+                    <mat-menu #afterMenu="matMenu" xPosition="after">
+                        <button mat-menu-item>30 Days</button>
+                        <button mat-menu-item>3 Months</button>
+                        <button mat-menu-item>9 Months</button>
+                    </mat-menu>
+                </div>
+                <div class="cs4-gender-chart">
+                </div>
+                <div class="cs4-list">
+                    <table align="center">
+                        <tr>
+                            <td>Male</td>
+                            <td style="color: #1e293b; font-weight: 500; font-size: 14px;">25,347
+                            </td>
+                            <td style="color: #64748b; font-weight: 400; font-size: 14px;">55%</td>
+                        </tr>
+                        <tr>
+                            <td>Female</td>
+                            <td style="color: #1e293b; font-weight: 500; font-size: 14px;">20,738
+                            </td>
+                            <td style="color: #64748b; font-weight: 400; font-size: 14px;">45%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="common">
+                <div class="cs4-heading">
+                    <div class="csh4-text">Age</div>
+                    <button mat-button [matMenuTriggerFor]="afterMenu"
+                        style="font-size: 12px; padding:0px; width: 70px; margin: 0px !important; color: #64748b;">30
+                        Days</button>
+                    <mat-menu #afterMenu="matMenu" xPosition="after">
+                        <button mat-menu-item>30 Days</button>
+                        <button mat-menu-item>3 Months</button>
+                        <button mat-menu-item>9 Months</button>
+                    </mat-menu>
+                </div>
+                <div class="cs4-age-chart">
+                </div>
+                <div class="cs4-list">
+                    <table align="center">
+                        <tr style="border-bottom:1px solid red;">
+                            <td>Under 30</td>
+                            <td style="color: #1e293b; font-weight: 500; font-size: 14px;">16,130</td>
+                            <td style="color: #64748b; font-weight: 400; font-size: 14px;">35%</td>
+                        </tr>
+                        <tr>
+                            <td>Over 30</td>
+                            <td style="color: #1e293b; font-weight: 500; font-size: 14px;">29,955 </td>
+                            <td style="color: #64748b; font-weight: 400; font-size: 14px;">65%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="common">
+                <div class="cs4-heading">
+                    <div class="csh4-text">Language</div>
+                    <button mat-button [matMenuTriggerFor]="afterMenu"
+                        style="font-size: 12px; padding:0px; width: 70px; margin: 0px !important; color: #64748b;">30
+                        Days</button>
+                    <mat-menu #afterMenu="matMenu" xPosition="after">
+                        <button mat-menu-item>30 Days</button>
+                        <button mat-menu-item>3 Months</button>
+                        <button mat-menu-item>9 Months</button>
+                    </mat-menu>
+                </div>
+                <div class="cs4-language-chart">
+                </div>
+                <div class="cs4-list">
+                    <table align="center">
+                        <tr style="border-bottom:1px solid red;">
+                            <td>English</td>
+                            <td style="color: #1e293b; font-weight: 500; font-size: 14px;">11,521
+                            </td>
+                            <td style="color: #64748b; font-weight: 400; font-size: 14px;">25%</td>
+                        </tr>
+                        <tr>
+                            <td>Other</td>
+                            <td style="color: #1e293b; font-weight: 500; font-size: 14px;">34,564</td>
+                            <td style="color: #64748b; font-weight: 400; font-size: 14px;">75%</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 </div>

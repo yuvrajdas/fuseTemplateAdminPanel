@@ -1,0 +1,336 @@
+<div class="finance-container">
+    <div class="finance-header">
+        <div class="header-texts">
+            <div class="header-heading">Finance dashboard</div>
+            <div class="sub-heading">Keep track of your financial status</div>
+        </div>
+        <div class="header-buttons">
+            <button mat-button class="setting"> <mat-icon role="img"
+                    class="mat-icon notranslate icon-size-5 mat-icon-no-color" aria-hidden="true"
+                    ng-reflect-svg-icon="heroicons_solid:document-repor" data-mat-icon-type="svg"
+                    data-mat-icon-name="document-report" data-mat-icon-namespace="heroicons_solid"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#64748B" fit="" height="100%"
+                        width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                        <path fill-rule="evenodd"
+                            d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm2 10a1 1 0 10-2 0v3a1 1 0 102 0v-3zm2-3a1 1 0 011 1v5a1 1 0 11-2 0v-5a1 1 0 011-1zm4-1a1 1 0 10-2 0v7a1 1 0 102 0V8z"
+                            clip-rule="evenodd"></path>
+                    </svg></mat-icon> Reports</button>
+            <button mat-button class="setting"> <mat-icon role="img"
+                    class="mat-icon notranslate icon-size-5 mat-icon-no-color" aria-hidden="true"
+                    data-mat-icon-type="svg" data-mat-icon-name="cog" data-mat-icon-namespace="heroicons_solid"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#64748B" fit="" height="100%"
+                        width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                        <path fill-rule="evenodd"
+                            d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                            clip-rule="evenodd"></path>
+                    </svg></mat-icon> Settings</button>
+            <button mat-button class="export">
+                <mat-icon role="img" class="mat-icon notranslate icon-size-5 mat-icon-no-color" aria-hidden="true"
+                    data-mat-icon-type="svg" data-mat-icon-name="save" data-mat-icon-namespace="heroicons_solid"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" fit="" height="100%"
+                        width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                        <path
+                            d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z">
+                        </path>
+                    </svg>
+                </mat-icon> <span> &nbsp;Export</span>
+            </button>
+        </div>
+    </div>
+    <!-- Finace Card Section 1 -->
+    <div class="finance-card1">
+        <div class="finance-card-left">
+            <div class="previous-statement">
+                <div class="prev-statement-header">
+                    <div class="text">
+                        <div class="main-header-text">Previous Statement</div>
+                        <div class="sub-header-text">Paid on January 17, 2023</div>
+                    </div>
+                    <button mat-button [matMenuTriggerFor]="afterMenu"
+                        style="font-size: 12px; padding:0px; width: 40px; margin: 0px !important; color: #64748b;"><mat-icon>more_vert</mat-icon></button>
+                    <mat-menu #afterMenu="matMenu" xPosition="after">
+                        <button mat-menu-item>
+                            <mat-icon>view_stream</mat-icon>
+                            <span>View Statement</span>
+                        </button>
+                        <button mat-menu-item><mat-icon> call_received</mat-icon> <span>Spending
+                                breakdown</span></button>
+                        <button mat-menu-item> <mat-icon>arrow_downward</mat-icon> <span>Tax Breakdown</span></button>
+                        <button mat-menu-item><mat-icon>print</mat-icon> <span>Print statement</span></button>
+                        <button mat-menu-item> <mat-icon> email</mat-icon> <span>Email statement</span></button>
+                    </mat-menu>
+
+                </div>
+                <div class="prev-statement-body">
+                    <div class="prev-statement-body-data">
+                        <div class="text">Card Limit</div>
+                        <div class="number">$34,500.00</div>
+                    </div>
+                    <div class="prev-statement-body-data">
+                        <div class="text">Spent</div>
+                        <div class="number">$27,221.21</div>
+                    </div>
+                    <div class="prev-statement-body-data">
+                        <div class="text">Minimum</div>
+                        <div class="number">$7,331.94</div>
+                    </div>
+                </div>
+                <div class="logo"><mat-icon role="img"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="#CAF0D8" fit="" height="100px" width="100px"
+                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg></mat-icon></div>
+            </div>
+            <div class="current-statement">
+                <div class="current-statement-header">
+                    <div class="text">
+                        <div class="main-header-text">Current Statement</div>
+                        <div class="sub-header-text">Must be paid before 19 February 2023</div>
+                    </div>
+                    <button mat-button [matMenuTriggerFor]="afterMenu"
+                        style="font-size: 12px; padding:0px; width: 40px; margin: 0px !important; color: #64748b;"><mat-icon>more_vert</mat-icon></button>
+                    <mat-menu #afterMenu="matMenu" xPosition="after">
+                        <button mat-menu-item>
+                            <mat-icon>view_stream</mat-icon>
+                            <span>View Statement</span>
+                        </button>
+                        <button mat-menu-item><mat-icon> call_received</mat-icon> <span>Spending
+                                breakdown</span></button>
+                        <button mat-menu-item> <mat-icon>arrow_downward</mat-icon> <span>Tax Breakdown</span></button>
+                        <button mat-menu-item><mat-icon>print</mat-icon> <span>Print statement</span></button>
+                        <button mat-menu-item> <mat-icon> email</mat-icon> <span>Email statement</span></button>
+                    </mat-menu>
+
+                </div>
+                <div class="current-statement-body">
+                    <div class="current-statement-body-data">
+                        <div class="text">Card Limit</div>
+                        <div class="number">$34,500.00</div>
+                    </div>
+                    <div class="current-statement-body-data">
+                        <div class="text">Spent</div>
+                        <div class="number">$39,819.41</div>
+                    </div>
+                    <div class="current-statement-body-data">
+                        <div class="text">Minimum</div>
+                        <div class="number">$9,112.51</div>
+                    </div>
+                </div>
+                <div class="logo"><mat-icon role="img"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="#FBCED2" fit="" height="100px" width="100px"
+                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg></mat-icon>
+                </div>
+            </div>
+
+        </div>
+        <div class="finance-card-right">
+            <div class="finance-card-right-header">
+                <div class="text">
+                    <div class="main-header-text">Account Balance</div>
+                    <div class="sub-header-text">Monthly balance growth and avg. monthly income</div>
+                </div>
+                <button mat-button [matMenuTriggerFor]="fcrsm"
+                    style="font-size: 12px; padding:0px; width: 40px; margin: 0px !important; color: #64748b;"><mat-icon>more_vert</mat-icon></button>
+                <mat-menu #fcrsm="matMenu" xPosition="after">
+                    <button mat-menu-item>3 Months</button>
+                    <button mat-menu-item>6 Months</button>
+                    <button mat-menu-item>9 Months</button>
+                    <button mat-menu-item>12 Months</button>
+                </mat-menu>
+            </div>
+            <div class="finance-card-right-number">
+                <div class="finance-card-right-number-data">
+
+                    <div class="number">$34,500.00</div>
+                    <div class="text">Average Monthly Growth</div>
+                </div>
+                <div class="finance-card-right-number-data">
+
+                    <div class="number">$45,332.00</div>
+                    <div class="text">Average Monthly Income</div>
+                </div>
+            </div>
+            <div id="finance-card-right-chart"></div>
+        </div>
+    </div>
+
+    <div class="recent-transaction-cart-wrapper">
+        <div class="recent-transaction">
+            <div class="recent-transaction-header">
+                <div class="text">Recent transactions</div>
+                <div class="sub-text">1 pending, 4 completed</div>
+            </div>
+
+            <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+                <ng-container matColumnDef="transaction_id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                        Transaction ID
+                    </th>
+                    <td mat-cell *matCellDef="let element"> {{element.transaction_id}} </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by date">
+                        Date
+                    </th>
+                    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name">
+                        Name
+                    </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="amount">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by amount">
+                        Amount
+                    </th>
+                    <td mat-cell *matCellDef="let element" class="amount"> {{element.amount | currency:'USD'}}</td>
+                </ng-container>
+
+
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by status">
+                        Status
+                    </th>
+                    <td mat-cell *matCellDef="let element"> <span class="completed"
+                            [ngClass]="element.status == 'COMPLETED' ? 'completed' : 'pending'">{{element.status}}</span>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <div class="transaction-button">
+                <button class="see-all-transactions" mat-button>See all transactions</button>
+            </div>
+        </div>
+        <div class="budget">
+            <div class="budget-header">
+                <div>
+                    <div class="budget-header-text">Budget</div>
+                    <div class="budget-sub-header-text">Monthly budget summary</div>
+                </div>
+                <button mat-button [matMenuTriggerFor]="budgetSummary"
+                    style="font-size: 12px; padding:0px; width: 40px; margin: 0px !important; color: #64748b;"><mat-icon>more_vert</mat-icon></button>
+                <mat-menu #budgetSummary="matMenu" xPosition="after">
+                    <button mat-menu-item><span>Expenses breakdown</span></button>
+                    <button mat-menu-item><span>Savings breakdown</span></button>
+                    <button mat-menu-item> <span>Tax Breakdown</span></button>
+                    <div style="border-bottom: 1px solid #cccccc; width: 100%;"></div>
+                    <button mat-menu-item><mat-icon>print</mat-icon><span>Print budget statement</span></button>
+                    <button mat-menu-item> <mat-icon> email</mat-icon><span>Email budget statement</span></button>
+                </mat-menu>
+            </div>
+            <div class="budget-discription">
+                <div>Last month; you had <span>223</span> expense</div>
+                <div>transactions, <span>12</span> savings entries and <span>4</span> bills.</div>
+            </div>
+
+            <div class="bprogress">
+                <div class="logo">
+                    <mat-icon role="img" class="mat-icon notranslate text-current mat-icon-no-color" aria-hidden="true"
+                        data-mat-icon-type="svg" data-mat-icon-name="credit-card"
+                        data-mat-icon-namespace="heroicons_outline"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="#dc2626" fit="" height="100%" width="100%"
+                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">
+                            </path>
+                        </svg>
+                    </mat-icon>
+                </div>
+                <div class="progress">
+                    <div class="exp">Expenses</div>
+                    <div class="expValue">$11,763.34</div>
+                    <mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+                </div>
+                <div class="percentage"><span>2.6%</span> <mat-icon role="img"
+                        class="mat-icon notranslate text-green-600 icon-size-4 ml-1 mat-icon-no-color"
+                        aria-hidden="true" data-mat-icon-type="svg" data-mat-icon-name="arrow-narrow-down"
+                        data-mat-icon-namespace="heroicons_solid"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="#16a34A" fit="" height="70%" width="70%"
+                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path fill-rule="evenodd"
+                                d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg></mat-icon>
+                </div>
+            </div>
+            <div class="bprogress">
+                <div class="savings">
+                    <mat-icon role="img" class="mat-icon notranslate text-current mat-icon-no-color" aria-hidden="true"
+                        data-mat-icon-type="svg" data-mat-icon-name="cash"
+                        data-mat-icon-namespace="heroicons_outline"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="#3730a3" fit="" height="100%" width="100%"
+                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg></mat-icon>
+                </div>
+                <div class="progress">
+                    <div class="exp">Savings</div>
+                    <div class="expValue">$10,974.12</div>
+                    <mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+                </div>
+                <div class="percentage"><span>12.7%</span> <mat-icon role="img"
+                        class="mat-icon notranslate text-red-600 icon-size-4 ml-1 mat-icon-no-color" aria-hidden="true"
+                        data-mat-icon-type="svg" data-mat-icon-name="arrow-narrow-up"
+                        data-mat-icon-namespace="heroicons_solid"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="#dc2626" fit="" height="70%" width="70%"
+                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg></mat-icon>
+                </div>
+            </div>
+            <div class="bprogress">
+                <div class="bills">
+                    <mat-icon role="img" class="mat-icon notranslate text-current mat-icon-no-color" aria-hidden="true"
+                        data-mat-icon-type="svg" data-mat-icon-name="light-bulb"
+                        data-mat-icon-namespace="heroicons_outline"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" fit="" height="100%" width="100%"
+                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                            </path>
+                        </svg></mat-icon>
+                </div>
+                <div class="progress">
+                    <div class="exp">Bills</div>
+                    <div class="expValue">$1,789.22</div>
+                    <mat-progress-bar mode="determinate" value="95"></mat-progress-bar>
+                </div>
+                <div class="percentage"><span>105.7%</span> <mat-icon role="img"
+                        class="mat-icon notranslate text-red-600 icon-size-4 ml-1 mat-icon-no-color" aria-hidden="true"
+                        data-mat-icon-type="svg" data-mat-icon-name="arrow-narrow-up"
+                        data-mat-icon-namespace="heroicons_solid"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20" fill="#dc2626" fit="" height="70%" width="70%"
+                            preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg></mat-icon>
+                </div>
+            </div>
+            <div class="budget-sub-description">
+                Exceeded your personal limit! Be careful next <p>month.</p>
+            </div>
+            <div class="download-summary-button">
+                <button class="download-summary" mat-button>Download Summmarys</button>
+            </div>
+        </div>
+    </div>
+</div>

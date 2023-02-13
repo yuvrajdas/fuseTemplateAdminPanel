@@ -309,8 +309,6 @@
     }
 
     .card-section-4 {
-        border: 1px solid red;
-
         .card-section-4-wrapper {
             padding: 10px 50px;
             display: flex;
@@ -337,6 +335,26 @@
                         font-size: 15px;
                         font-weight: 500;
                     }
+                }
+
+                .cs4-list {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+
+                    table {
+                        margin-top: 10px;
+                        position: relative;
+                        bottom: 10px !important;
+                        width: 100%;
+                        margin-left: 20px;
+
+                        td {
+                            padding: 10px 0px;
+                        }
+                    }
+
                 }
             }
         }

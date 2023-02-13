@@ -1,0 +1,471 @@
+.finance-container {
+    background-color: #f1f5f9;
+    width: calc(100% - 64px);
+    height: 100%;
+
+    .finance-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 150px;
+        margin: 0px 50px;
+
+        .header-texts {
+            .header-heading {
+                color: #1e293b;
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            .sub-heading {
+                color: #64748b;
+                font-size: 14px;
+                font-weight: 400;
+                padding: 5px 0px;
+            }
+        }
+
+        .header-buttons {
+            display: flex;
+
+            .setting {
+                border: 1px solid #ccc;
+            }
+
+            .export {
+                color: #ffff;
+                background-color: #4F46E5;
+                width: 110px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+    }
+
+    .finance-card1 {
+        margin: 0px 50px;
+        display: flex;
+        gap: 20px;
+
+        .finance-card-left {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+
+            .previous-statement {
+                border: 1px solid #E7EBEF;
+                border-radius: 10px;
+                background-color: #ffffff;
+                flex: 1;
+                position: relative;
+                overflow: hidden;
+
+                .prev-statement-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0px 20px;
+                    // flex-basis: 100px !important;
+                    height: 70px;
+
+                    .text {
+                        .main-header-text {
+                            color: #1e293b;
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+
+                        .sub-header-text {
+                            color: #16a34a;
+                            font-weight: 500;
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .prev-statement-body {
+                    display: flex;
+                    gap: 50px;
+                    align-items: center;
+                    height: calc(100% - 70px);
+                    padding: 0px 20px;
+
+                    .prev-statement-body-data {
+                        z-index: 1;
+
+                        .text {
+                            color: #64748b;
+                            font-size: 12px;
+                            padding: 2px;
+                        }
+
+                        .number {
+                            color: #1e293b;
+                            font-size: 24px;
+                            font-weight: 500;
+                            padding: 2px;
+                        }
+                    }
+                }
+
+                .logo {
+                    position: absolute;
+                    bottom: -30px !important;
+                    right: 50px !important;
+                }
+            }
+
+            .current-statement {
+                border: 1px solid #E7EBEF;
+                border-radius: 10px;
+                background-color: #ffffff;
+                flex: 1;
+                position: relative;
+                overflow: hidden;
+
+                .current-statement-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0px 20px;
+                    // flex-basis: 100px !important;
+                    height: 70px;
+
+                    .text {
+                        .main-header-text {
+                            color: #1e293b;
+                            font-size: 16px;
+                            font-weight: 500;
+                        }
+
+                        .sub-header-text {
+                            color: #dc2626;
+                            font-weight: 500;
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .current-statement-body {
+                    display: flex;
+                    gap: 50px;
+                    align-items: center;
+                    height: calc(100% - 70px);
+                    padding: 0px 20px;
+                    z-index: 1 !important;
+
+                    .current-statement-body-data {
+                        z-index: 1 !important;
+
+                        .text {
+                            color: #64748b;
+                            font-size: 12px;
+                            padding: 2px;
+                        }
+
+                        .number {
+                            color: #1e293b;
+                            font-size: 24px;
+                            font-weight: 500;
+                            padding: 2px;
+                        }
+                    }
+                }
+
+                .logo {
+                    position: absolute;
+                    bottom: -30px !important;
+                    right: 50px !important;
+                }
+            }
+        }
+
+        .finance-card-right {
+            flex: 1;
+            background-color: #ffffff;
+            border-radius: 10px;
+
+            .finance-card-right-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 20px;
+                // flex-basis: 100px !important;
+                height: 70px;
+
+                .text {
+                    .main-header-text {
+                        color: #1e293b;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+
+                    .sub-header-text {
+                        color: #64748b;
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .finance-card-right-number {
+                display: flex;
+                gap: 50px;
+                align-items: center;
+                height: 100px;
+                padding: 0px 20px;
+
+                .finance-card-right-number-data {
+
+                    .text {
+                        color: #64748b;
+                        font-size: 12px;
+                        padding: 5px 6px;
+                    }
+
+                    .number {
+                        color: #1e293b;
+                        font-size: 36px;
+                        font-weight: 500;
+                        padding: 5px;
+                    }
+                }
+            }
+
+            #finance-card-right-chart {
+                margin-left: -22px !important;
+            }
+        }
+    }
+
+    .recent-transaction-cart-wrapper {
+
+        gap: 20px;
+        display: flex;
+        margin: 0px 50px;
+        padding: 20px 0px;
+
+        .recent-transaction {
+            width: 70%;
+            height: 560px;
+            border: 1px solid #E7EBEF;
+            border-radius: 10px;
+            background-color: #ffffff;
+
+            .recent-transaction-header {
+                padding: 20px;
+
+                .text {
+                    color: #1e293b;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding: 2px 0px;
+                }
+
+                .sub-text {
+                    color: #64748b;
+                    font-size: 14px;
+                    font-weight: 400;
+                    padding: 2px 0px;
+                }
+            }
+
+            table {
+                width: 95% !important;
+                height: 65%;
+                background: transparent !important;
+                box-shadow: none !important;
+                margin: auto;
+
+                th {
+                    font-size: 14px !important;
+                    color: #000000 !important;
+                }
+
+                .amount {
+                    color: #000000de;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                .completed {
+                    background-color: #bbf7d0;
+                    font-size: 10px;
+                    padding: 4px 15px;
+                    border-radius: 10px;
+                    color: #166543;
+                    font-weight: 600;
+                }
+
+                .pending {
+                    background: #fecaca;
+                    color: #991b1b;
+                }
+            }
+
+            .transaction-button {
+                margin: 35px 20px;
+
+                .see-all-transactions {
+                    border: 1px solid #ccc;
+                    width: 176px !important;
+
+                }
+            }
+        }
+
+        .budget {
+            width: 30%;
+            height: 560px;
+            border: 1px solid #E7EBEF;
+            border-radius: 10px;
+            background-color: #ffffff;
+
+            .budget-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+
+                .budget-header-text {
+                    color: #1e293b;
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+
+                .budget-sub-header-text {
+                    color: #64748b;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+
+            .budget-discription {
+                color: #414e60 !important;
+                padding: 0px 20px;
+                margin-bottom: 17px;
+
+                span {
+                    font-size: 15px;
+                    color: #1e293b;
+                    font-weight: 500;
+                }
+            }
+
+            .bprogress {
+                display: flex;
+                padding: 15px;
+                gap: 10px;
+
+                .logo {
+                    flex-basis: 56px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #fee2e2;
+                }
+
+                .savings {
+                    flex-basis: 56px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #e0e7ff;
+                }
+
+                .bills {
+                    flex-basis: 56px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #ccfbf1;
+                }
+
+                .progress {
+                    flex-grow: 1;
+
+                    .exp {
+                        font-size: 12px;
+                        color: #64748b;
+                        font-weight: 400;
+                        padding: 2px;
+                    }
+
+                    .expValue {
+                        font-weight: 500;
+                        font-size: 20px;
+                        color: #1e293b;
+                        padding-bottom: 10px;
+                    }
+                }
+
+                .percentage {
+                    flex-basis: 56px;
+                    display: flex;
+                    align-items: end;
+                    justify-content: center;
+                }
+            }
+
+            .budget-sub-description {
+                color: #64748b;
+                font-size: 13px;
+                padding: 0px 20px;
+            }
+
+            .download-summary-button {
+                padding: 30px 20px;
+
+                .download-summary {
+                    border: 1px solid #ccc;
+                    width: 176px !important;
+
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1337px) {
+    .finance-card1 {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .current-statement {
+        display: block !important;
+        height: 150px !important;
+        padding-bottom: 20px !important;
+    }
+
+    .previous-statement {
+        display: block !important;
+        height: 150px !important;
+        padding-bottom: 20px !important;
+    }
+}
+
+@media screen and (max-width:1470px) {
+    .recent-transaction-cart-wrapper {
+        flex-direction: column;
+
+        .recent-transaction {
+            width: 100% !important;
+        }
+
+        .budget {
+            width: 100% !important;
+        }
+    }
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+    background-color: #dc2626;
+}
