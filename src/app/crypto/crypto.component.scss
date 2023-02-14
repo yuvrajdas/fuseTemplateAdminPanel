@@ -1,5 +1,52 @@
 .crypto-container {
     background-color: #f1f5f9;
     width: calc(100% - 64px);
-    height: 100vh;
+    height: calc(100vh - 64px);
+    display: flex;
+
+
+    .crypto-left-container {
+        border: 1px solid blueviolet;
+        height: 100%;
+        flex-basis: 320px;
+
+        .crypto-list-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+
+            .content {
+
+                .text {
+                    color: #64748b;
+                    font-size: 13px;
+                    font-weight: 400;
+                    padding: 2px 0px;
+                }
+
+                .value {
+
+                    .number {
+                        font-size: 20px;
+                        color: #1e293b;
+                        padding-right: 3px;
+                    }
+
+                    .percentage {
+                        color: #22c55e;
+                        font-size: 12px;
+                        padding-left: 3px;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    .crypto-right-container {
+        border: 1px solid red;
+        height: 100%;
+        flex-grow: 1;
+    }
 }
